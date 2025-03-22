@@ -40,3 +40,39 @@
 .read-the-docs {
   color: #888;
 }
+
+.toggleMain{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.toggleHolder{
+  display: flex;
+  border-radius: 15px;
+  flex-direction: row;
+  width: auto;
+  background-color: blue;
+  opacity: 0.5;
+}
+
+.toggle-button {
+  cursor: pointer;
+  border-radius: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: background-color 0.1s, opacity 0.3s;
+  
+  &.activeTab {
+    background-color: rgb(14 165 233 );
+    /* opacity: 1; */
+    color: white;
+  }
+  
+  &.inactiveTab {
+    background-color:rgb(14 165 233 / var(--tw-bg-opacity));
+    /* opacity: 0.5; */
+  }
+}

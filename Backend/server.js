@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth.routes.js"; // Corrected path
 import messageRoutes from "./routes/message.routes.js"; // Ensure the path and file name are correct
 import userRoutes from "./routes/user.routes.js"; // Ensure the path and file name are correct
+import groupRoutes from "./routes/group.route.js"
 
 import connectToMongoDB from "./db/connectToMongoDB.js"; // Ensure the path and file name are correct
 import { app, server } from "./socket/socket.js"; // Ensure the path and file name are correct
@@ -21,6 +22,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/group", groupRoutes);
 
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
